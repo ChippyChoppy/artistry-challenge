@@ -1,0 +1,11 @@
+<h1> Assign Instrument to Artist </h1>
+
+<%= form_for @artist_instrument do |f| %>
+    <p><%= f.label :artist_id %>
+    <%= f.collection_select :artist_id, @artists, :id, :name %></p>
+    <p><%= f.label :instrument_id %>
+    <%= f.collection_select :instrument_id, @instruments, :id, :name %></p>
+
+    <p><%= f.submit %>
+<% end %>
+
